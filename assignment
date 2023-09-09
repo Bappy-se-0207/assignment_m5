@@ -1,0 +1,72 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomeScreen(),
+      title: 'First app',
+    );
+  }
+}
+class HomeScreen extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.green,
+        toolbarHeight: 100,
+        elevation: 70,
+        centerTitle: true,
+        title: Text('Home', style: TextStyle(
+    fontWeight: FontWeight.bold)
+    ),
+
+        leading: Icon(Icons.add_home_work_sharp,
+            color: Colors.white,
+            size: 24),
+        actions: [
+          Icon(Icons.search,
+          color: Colors.white,
+          size: 24,
+          ),
+               ],
+      ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+          Text(
+          'This is mod of 5 Assignment',
+          style: TextStyle(
+              color: Colors.black, fontWeight: FontWeight.bold),
+        ),
+            RichText(
+              text: TextSpan(
+                style: TextStyle(fontSize: 20, color: Colors.purple),
+                children: [
+                  TextSpan(
+                      text: 'My ', style: TextStyle(color: Colors.pink)),
+                  TextSpan(text: 'phone ', style: TextStyle(color: Colors.blue)),
+                  TextSpan(text: 'name ', style: TextStyle(color: Colors.purple)),
+                  TextSpan(text: 'is ', style: TextStyle(color: Colors.green)),
+                    TextSpan(text: 'gphone ',
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.amber,
+                          fontWeight: FontWeight.w600)),
+                ],
+              ),
+            ),
+          ]
+        ),
+        ),
+    );
+  }
+}
